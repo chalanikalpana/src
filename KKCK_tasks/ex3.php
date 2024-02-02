@@ -107,6 +107,9 @@ Note, you have already done a table in Exercise 1. If you wish, you can use the 
 
 
      
+
+
+    
   
 
 
