@@ -1,6 +1,6 @@
 body 
   {
-    background-image: url(background-image.jpg);
+    background-color:rgb(54, 169, 236);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 16px auto;
     width: 1200px;
@@ -40,10 +40,16 @@ h2
   
 }
 
+h3
+{
+  font-size: 28px;
+  color: black;
+}
+
 p
 {
-  font-size: 18px;
-  color: rgb(14, 14, 216);
+  font-size: 24px;
+  color: rgb(18, 18, 18);
   font-style: italic;
   
    
