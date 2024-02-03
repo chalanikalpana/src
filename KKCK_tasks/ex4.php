@@ -1,38 +1,28 @@
 <?php 
 $title = "Exercise 4: Control flow and loops";
-include 'header.php'; ?><br><br>
-
-
+include 'header.php'; 
+?><br><br>
 
 <h3>1. Create a file (ex4.php): Create a file named ex4.php in your exercise folder.
      Ensure that it uses the same layout as your other pages and that your navigation 
-     bar includes a link to this exercise.</h3><br><br>
+     bar includes a link to this exercise.
+</h3><br><br>
 
-<h3>If-Else: Write a PHP script to get inputs (age and name) from the user and based on their age, decide if he/she is eligible for voting. 
-    (18 or more than 18 years is eligible for voting, use form to get user input).</h3><br><br>
+<h3>2. If-Else: Write a PHP script to get inputs (age and name) from the user and based on their age, decide if he/she is eligible for voting. 
+    (18 or more than 18 years is eligible for voting, use form to get user input).
+</h3><br><br>
          
-    <?php
+<?php
     $name = " ";
     $age = " ";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
+     {
         $name = $_POST["name"];
         $age = $_POST["age"];
 
-        
-        echo "<h4>Thank you,", $name ."You are" .$age ."years old.</h4>";
-    }
-    ?>
-
-
-
-
-
-
-
-
-
+     }
+?>
 
 <form method="post" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF']); ?>">
 <div class="row">
@@ -44,57 +34,50 @@ include 'header.php'; ?><br><br>
   </div>
   <div class="col-auto">
      <input type="submit" name="Check" value="Check" class="btn btn-primary">
-    
   </div>
 </div>
 </form><br><br>
 
 <?php
 
-
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-  
-    if (isset($_POST['Check']))
+ if ($_SERVER["REQUEST_METHOD"] == "POST") 
+  {
+   if (isset($_POST['Check']))
     {
-    
-        if ($age >= 18)
+      if ($age >= 18)
         {
-         echo " <h4>You are eligible for voting!</h4>";
+         echo " <h4>You are eligible for voting!</h4><br><br>";
         }
         else
         {
-            echo " <h4>You are not eligible for voting!</h4>";
+            echo " <h4>You are not eligible for voting!</h4><br><br>";
         }
     }
-}
+  }
 ?>
         
-        <h3>Switch Case: Write a PHP script that gets the current month 
-            and prints one of the following responses, depending on whether it's August or not:
-        </h3><br><br>
+<h3>3. Switch Case: Write a PHP script that gets the current month 
+    and prints one of the following responses, depending on whether it's August or not:
+</h3><br><br>
 
-        <?php
-        $currentmonth = date("F");
-
-
-        switch($currentmonth)
+<?php
+    $currentmonth = date("F");
+    
+    switch($currentmonth)
         { 
         case "August":
-            echo "<h4>It's August, so it's still holiday.</h4>";
+            echo "<h4>It's August, so it's still holiday.</h4><br><br>";
             break;
             default:
-            echo "<h4>Not August, this is " . $currentmonth . " so I don't have any holidays</h4>";
-
-
+            echo "<h4>Not August, this is " . $currentmonth . " so I don't have any holidays</h4><br><br>";
         }
 
 
 ?>
 
-<h3>For Loop: Write a PHP script that will print the multiplication table of a number (n, use form to get user input).</h3><br><br>
+<h3>4. For Loop: Write a PHP script that will print the multiplication table of a number (n, use form to get user input).
+
+</h3><br><br>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <label for="number">Enter a Number:</label>
@@ -104,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 </form>
  
 <?php
-
+$number=" ";
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     if (isset ($_POST['Save']))
@@ -113,10 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $number = $_POST["number"];
         
       
-        
-   
-
-
     if (is_numeric($number))
      {
         
@@ -136,34 +115,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 ?>
 
 
-
-
-<h3>While Loop: Write a PHP script that will print all the numbers from 1 to n. 
+<h3>5. While Loop: Write a PHP script that will print all the numbers from 1 to n. 
     (use form to get user input)</h3><br><br>
 
-    <?php
+<?php
 
-$i = 1;
-while ($i <= $number)
- {
-  if ($i == $number) break;
-  echo $i;
-  $i++;
-}
+    $i = 1;
+    while ($i <= $number)
+      {
+        if ($i == $number) 
+        break;
+        echo $i;
+        $i++;
+      }
 
-    ?><br><br>
+?><br><br>
  
-<h3>Foreach Loop: Write a PHP script that will print all the elements of an array.
+<h3>6. Foreach Loop: Write a PHP script that will print all the elements of an array.
      $myarray=("HTML", "CSS", "PHP", "JavaScript").</h3><br><br>
 
-     <?php
+<?php
      $myarray = array ("HTML", "CSS", "PHP", "JavaScript");
 
      foreach ($myarray as $x)
      {
        echo "$x <br>";
      }
-     ?>
+?>
 
 <?php include 'footer.php'; ?>
 

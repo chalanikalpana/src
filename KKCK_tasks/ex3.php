@@ -6,12 +6,14 @@ include 'header.php'; ?><br><br><br>
 
 <h3>1.1 Form Creation: Create a simple HTML form to collect the user’s Firstname and Lastname.
      Use the echo statement to print “Hello [Firstname] [Lastname], You are welcome to my site.
-     ” inside an h3 tag. Table & Form Guide</h3><br><br>
+     ” inside an h3 tag. Table & Form Guide
+    </h3><br><br>
 
   
 
  <h3>1.2 Bootstrap Styling: Apply Bootstrap styles to the form. 
-    Make sure to include the Bootstrap CSS link in your head tag.</h3><br><br>
+    Make sure to include the Bootstrap CSS link in your head tag.
+  </h3><br><br>
     
 <form action="process.php" method="post">
 <div class="row">
@@ -62,7 +64,7 @@ Note, you have already done a table in Exercise 1. If you wish, you can use the 
     Join them together and print the length of the string.
     </h3><br><br>
 
-    <?php
+<?php
 
     $str1 = "Hello";
     $str2 = "World";
@@ -70,15 +72,15 @@ Note, you have already done a table in Exercise 1. If you wish, you can use the 
     echo $string;
     $length = strlen($string);
     echo "Length of the Joined String: $length";
-    ?><br><br>
+?><br><br>
 
-    <h3>
+<h3>
     1.5 Number Addition: 
     Write a script to add up the numbers: 298, 234, 46. 
     Use variables to store these numbers and an echo statement to output your answer.
-    </h3><br><br>
+</h3><br><br>
 
-    <?php
+<?php
     $a = 298;
     $b = 234;
     $c = 46;
@@ -86,24 +88,24 @@ Note, you have already done a table in Exercise 1. If you wish, you can use the 
     $sum = $a + $b + $c ;
     echo "Sum of the variables: $sum";
 
-    ?><br><br>
+?><br><br>
 
-    <h3>
+<h3>
     1.6 Browser Detection: 
     Write a PHP script to detect the browser being used to view your pages. 
     Hint: Use predefined variables: $_SERVER. Predefined Variables
-    </h3><br><br>
+</h3><br><br>
 
-    <?php
+<?php
     echo $_SERVER['SERVER_NAME'];
-    ?><br><br>
+?><br><br>
 
-    <h3>
+<h3>
     1.7 File Modification Time: 
         Write a PHP script in the footer section of your universal footer to display the last modification time of a file. 
         Hint: Use predefined variable $_SERVER, basename function  to get the filename , 
         filetime function to get the last modified time & date function to print the date and time Predefined Variables
-    </h3><br><br><br>
+</h3><br><br><br>
 
 
      
