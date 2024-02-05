@@ -118,18 +118,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <h3>5. While Loop: Write a PHP script that will print all the numbers from 1 to n. 
     (use form to get user input)</h3><br><br>
 
+    <form method="post" name="printNumber" action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>>
+    Input Number: <input type="number" name="number"required><br><br>
+    <input type="submit" name="submitNumber" value="Submit"><br><br>
+</form>
+
 <?php
-
-    $i = 1;
-    while ($i <= $number)
-      {
-        if ($i == $number) 
-        break;
-        echo $i;
-        $i++;
-      }
-
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset ($_POST["submitNumber"])) {
+            $number = $_POST["number"];
+            echo "<h4> Print numbers from 1 to $number</h4>";
+            $i = 1;
+            do {
+                echo "$i <br>";
+                $i++;
+            } while ($i <= $number);
+        }     
+    }
 ?><br><br>
+
  
 <h3>6. Foreach Loop: Write a PHP script that will print all the elements of an array.
      $myarray=("HTML", "CSS", "PHP", "JavaScript").</h3><br><br>
