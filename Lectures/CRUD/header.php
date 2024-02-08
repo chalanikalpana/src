@@ -49,6 +49,9 @@
   <div class="row" style="margin-top: 10px; margin-bottom: 10px; margin-right: 5px;">
     <div class="col-sm-3" style="background-color: rgba(228, 235, 194, 0.353);">
       <h3>List of Tasks</h3>
-      some thing here
+      <ul>
+        <li> <a href="index.php" style="colour:black">Create Data</a></li>
+        <li> <a href="read.php">Read Data</a></li>
+      </ul>
     </div>
     <div class="col-sm-9">

@@ -1,4 +1,6 @@
 <?php
+$title="Read the data";
+include 'header.php';
 include 'db.php';
 // SQL query to retrieve data from the 'studentsinfo' table
 $sql = "SELECT * FROM studentsinfo";
