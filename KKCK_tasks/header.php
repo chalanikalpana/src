@@ -40,13 +40,13 @@
                     <a class="nav-link" href="ex4.php">Exercise 04</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Exercise 05</a>
+                    <a class="nav-link" href="https://github.com/AMKLGimhani/LittleTartBakery-WebPro/blob/main/README.md">Exercise 05</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Exercise 06</a>
+                    <a class="nav-link" href="../CRUD_APP/index.php">Exercise 07</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Exercise 07</a>
+                    <a class="nav-link" href="../CRUD_APP/read.php">Exercise 07</a>
                   </li>
                   
                   
