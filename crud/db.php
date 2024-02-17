@@ -1,5 +1,5 @@
 <?php
-//shel.hamk.fi >>> localhost
+
 $servername ="localhost";
 $username = "chalani23000";
 $password = "AjwDCBbn";

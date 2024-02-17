@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-include '../KKCK_tasks/header.php';
+include 'header.php';
 
 if (isset($_GET['id'])) {
     $a = $_GET['id'];
@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
         exit;
     }
     
-    // Check if the query returned any rows
+     
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_array($result);
     } else {
@@ -57,18 +57,33 @@ if (isset($_GET['id'])) {
 </form>
 <?php 
 
-if (isset($_POST['delete'])) {
-    
-    $query = mysqli_query($conn, "DELETE FROM studentinfo WHERE id = '$a'");
-    
-    
-    if ($query) {
-        echo "Record Deleted with id: $a <br>";
-        
-    } else {
-        
-        echo "Error: " . mysqli_error($conn);
-    }
+if (isset($_POST['submit'])) {
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  
+ 
+  $query = mysqli_query($conn, "UPDATE studentinfo SET first_name='$fname', last_name='$lname' WHERE id='$a'");
+  
+  
+  if ($query) {
+      echo "<h2>Your information is updated Successfully</h2>";
+      
+  } else {
+       
+      echo "Error: " . mysqli_error($conn);
+  }
 }
-include '../KKCK_tasks/footer.php';;
+
+  if (isset($_POST['delete'])){
+      $query = mysqli_query($conn,"DELETE FROM studentinfo where id='$a'");
+      if($query){
+          echo "Record Deleted with id: $a <br>";
+          
+      }
+      else { echo "Record Not Deleted";}
+      }
+
+$conn->close();
+
+include 'footer.php';;
 ?>
